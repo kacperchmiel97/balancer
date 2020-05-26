@@ -1,0 +1,10 @@
+<launch>
+
+  <group ns="teleop">
+  <param name="joy_node/dev" value="/dev/input/js2"/>
+    <node pkg="rosserial_server" name="server" type="socket_node"/>
+    <node pkg="joy" name="joy_node" type="joy_node"/>
+    <node pkg="balancer" name="teleop" type="teleop"/>
+  </group>
+
+</launch>
